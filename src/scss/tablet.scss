@@ -1,0 +1,107 @@
+@import "vars";
+
+
+@media (min-width: $breakpoint-tablet)  and (max-width: $breakpoint-desktop - 1px) {
+  .app {
+    width: 100%;
+    flex-direction: column
+  }
+  .app__menu{
+    width: 100%;
+  }
+
+
+  .app__header-spacer__left{
+    width: 2px;
+    margin: 0 $basic_size*2;
+  }
+
+  .app__header-spacer__right{
+    width: 2px;
+    margin: 0 $basic_size*2;
+  }
+  .app__header-left{
+    width: $menu_size_w;
+  }
+
+  .app__content{
+    margin-top:$menu_size_h;
+  }
+
+  .app__icon__menu,.app__icon__phone,.app__icon__user,.app__icon__message,.app__icon__request,.app__icon__status{
+    display: block;
+  }
+
+  .app-header__sidebar{
+    width: $menu_size_w;
+  }
+
+  .app-header__sidebar-content::after{
+    content: "";
+    width: calc(100% - 306px);
+    background-color: rgba(255,255,255,0.8);
+    position: absolute;
+    height: 100vh;
+    right:0;
+    top:0;
+    -webkit-box-shadow: 15px 1px 28px -8px rgba(34, 60, 80, 0.16) inset;
+    -moz-box-shadow: 15px 1px 28px -8px rgba(34, 60, 80, 0.16) inset;
+    box-shadow: 15px 1px 28px -8px rgba(34, 60, 80, 0.16) inset;
+  }
+
+  .app__page-menu{
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+  .app__brands-blocks {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+  }
+  .app__brands-block {
+    display: flex;
+  }
+  .app__brands-blocks > *:nth-child(n+7){
+    display: none;
+  }
+
+  .app__service-blocks > *:nth-child(n+4){
+    display: none;
+  }
+
+  .app__service-blocks {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+  }
+  .app__service-block {
+    display: flex;
+  }
+
+  .app__price-blocks__table {
+    display: table;
+    width: calc(100% - 20px);
+    border-collapse: collapse;
+    margin: 10px 20px ;
+
+  }
+
+  .app__price-blocks__table-row {
+    display: table-row;
+    background-color: $color-white;
+    border-top: 1px solid $color-grey;
+    margin: 0 10px;
+  }
+  .app__price-blocks__table-row:nth-child(1),.app__price-blocks__table-row:nth-child(2){
+    border: 0;
+  }
+
+  .app__price-blocks__table-cell {
+    display: table-cell;
+    padding: 18px;
+  }
+
+  .app__price-blocks__table-header {
+    display: table-row;
+    color:$color-black;
+  }
+
+}
